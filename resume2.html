@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>楊美女 - 個人履歷</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", "微軟正黑體", sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    color: #777;
+    margin: 5px 0;
+}
+
+section {
+    margin-top: 25px;
+}
+
+h2 {
+    border-left: 6px solid #6c63ff;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.skill-bar {
+    background: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.skill-bar div {
+    height: 20px;
+    background: linear-gradient(90deg, #6c63ff, #42a5f5);
+    width: 0;
+    color: white;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    border: none;
+    background: #6c63ff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #4b47cc;
+}
+
+.dark-mode {
+    background: #121212 !important;
+    color: white;
+}
+
+.dark-mode .container {
+    background: #1e1e1e;
+    color: white;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <header>
+        <h1>楊美女</h1>
+        <p>亞洲大學學生</p>
+        <p>學號：AU114018038</p>
+        <p>Email：aqc7228@gmail.com</p>
+    </header>
+
+    <section>
+        <h2>自我介紹</h2>
+        <p>
+            我是一位亞洲大學在學學生，具備學習熱忱與責任感，
+            對於資訊科技與新知充滿興趣，期望未來能在相關領域持續發展並提升自我能力。
+        </p>
+    </section>
+
+    <section>
+        <h2>學歷</h2>
+        <ul>
+            <li>亞洲大學（在學中）</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>技能</h2>
+        <p>HTML</p>
+        <div class="skill-bar"><div data-skill="85%">85%</div></div>
+
+        <p>CSS</p>
+        <div class="skill-bar"><div data-skill="75%">75%</div></div>
+
+        <p>JavaScript</p>
+        <div class="skill-bar"><div data-skill="70%">70%</div></div>
+    </section>
+
+    <section>
+        <h2>專案經驗</h2>
+        <ul>
+            <li>個人履歷網站製作</li>
+            <li>基礎前端網頁開發</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>聯絡方式</h2>
+        <p>Email：aqc7228@gmail.com</p>
+    </section>
+
+    <button onclick="toggleDarkMode()">🌙 切換深色模式</button>
+</div>
+
+<script>
+// 技能動畫
+window.onload = function() {
+    const bars = document.querySelectorAll('.skill-bar div');
+    bars.forEach(bar => {
+        bar.style.width = bar.getAttribute('data-skill');
+    });
+}
+
+// 深色模式
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+</script>
+
+</body>
+</html>
