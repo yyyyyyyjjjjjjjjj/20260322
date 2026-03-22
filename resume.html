@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>我的履歷</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="resume">
+    <!-- 左側 -->
+    <div class="sidebar">
+        <img src="images/profile.jpg" alt="個人照片" class="profile-img">
+
+        <h2 id="name">王小明</h2>
+        <p id="title">前端工程師</p>
+
+        <div class="section">
+            <h3>聯絡資訊</h3>
+            <p>📧 test@email.com</p>
+            <p>📱 0912-345-678</p>
+        </div>
+
+        <div class="section">
+            <h3>技能</h3>
+            <ul id="skills">
+                <li>HTML / CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 右側 -->
+    <div class="content">
+        <div class="section">
+            <h3>個人簡介</h3>
+            <p id="about">
+                我是一名熱愛網頁開發的工程師，擅長打造使用者友善的介面。
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>工作經驗</h3>
+            <div id="experience">
+                <p><strong>ABC公司</strong> - 前端工程師 (2022 - 現在)</p>
+                <p>負責網站開發與優化使用者體驗</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>學歷</h3>
+            <p>國立某某大學 資訊工程學系</p>
+        </div>
+
+        <button onclick="changeTheme()">切換主題</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
